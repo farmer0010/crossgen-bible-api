@@ -1,0 +1,17 @@
+### 1. 북마크 생성하기 (POST)
+POST http://localhost:8080/api/v1/bookmarks
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "book": 43,
+  "chapter": 3,
+  "verseCount": 16,
+  "note": "하나님이 세상을 이처럼 사랑하사! (첫 테스트 메모)"
+}
+
+###
+
+### 2. 방금 만든 북마크 가져오기 (GET)
+GET http://localhost:8080/api/v1/bookmarks/user/1
+Accept: application/json
