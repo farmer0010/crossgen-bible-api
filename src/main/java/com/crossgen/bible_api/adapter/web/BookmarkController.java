@@ -28,7 +28,7 @@ public class BookmarkController {
     }
 
     @GetMapping("/user/{userId}")
-    public ResponseEntity<List<Bookmark>> getUserBookmarks(@PathVariable Long userId) {
+    public ResponseEntity<List<Bookmark>> getUserBookmarks(@PathVariable("userId") Long userId) {
         List<Bookmark> bookmarks = bookmarkService.getUserBookmarks(userId);
         return ResponseEntity.ok(bookmarks);
     }
